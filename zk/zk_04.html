@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>实验</title>
+
+</head>
+<body>
+<div class="experiment-title">
+    <div align="center">
+        <h1 style="line-height: 20px;top: -10px;">系统设计</h1>
+    </div>
+</div>
+
+<div class="experiment-message clearfix">
+</div>
+<div class="experiment-message-text">
+</div>
+
+<h2>一、实验目的:</h2>
+<P> 1. 熟悉自动控制系统的实验调整技术； </P>
+<P>  2.初步掌握控制系统参数的设置和调整方法。</P>
+<h2>二、设计要求</h2>
+<P>实验分两步进行，第一步：根据设计任务，利用课余时间完
+    成初步设计；第二步：利用实验装置完成系统的调试或参数的修改，使之满足
+    性能指标的要求（未完成初步设计的同学，不得进行实验）。参考方框图、原理图：</P>
+<img src="img/ZK_001.png">
+<img src="img/ZK_002.png">
+<h3>一）设计任务：</h3>
+<P>按实验三测定的元件参数，设计一位置随动系统，满足性能指标的要求。
+    系统的性能指标要求：
+</P><P>σ %≤30
+    ts ≤0.4s         （误差按5%）
+    稳态误差≤2。
+</P>
+<h3>二）具体要求及注意事项：</h3>
+<h4>1. 初步设计</h4>
+<P>1）位置随动系统开环传递函数为：G0(s)=k/[S(TmS+1)]
+    各参数按实验三测定的数值。方框图如下：
+</P>
+<P> 2）绘出系统的动态结构图，并求出系统的闭环传递函数；</P>
+<P>  3）根据闭环传递函数，计算系统的性能指标σ%、ts，（可利用物理系网站上提供的控制系统模拟实验软件进行仿真）并绘出阶跃响应曲线。</P>
+<P>  4）将A2作为放大倍数可调的单元（通过调整RP5改变系统的开环增益）</P>
+<P>  5）可按最佳二阶系统的设计方法进行设计。</P>
+<h4> 2.实验调整</h4>
+<P> 1）按初步设计连接各单元（方框图可参考图2）。系统的阶跃响应曲线，可参照实验三的方法获取，为避免反
+    馈电位器输出值超出A/D允许的输入范围（5V），建议反馈电位器输出端（X2）和A/D的输入端按下图连接：</P>
+<img src="img/ZK_003.png">
+<P>  2）实验注意事项：
+    当加入输入信号，出现电动机连续旋转现象，应立即关断电源，改变反馈电位器的极性后，方可重新进行实验（为什么？）；
+    输入信号的数值，应使系统工作在线性状态。
+</P>
+<p><a href="https://www.wenjuan.in/s/RBVVV3X/">测试题</a> </p>
+<p><a href="../Index.html">返回首页</a> </p>
+</body>
+</html>

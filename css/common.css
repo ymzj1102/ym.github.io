@@ -1,0 +1,269 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*Index*/
+.ind-header{
+	width: 100%;
+	height: 125px;
+	padding: 0;
+	border-bottom: 2px solid #dcdcdc;
+	background-color: #fff;
+}
+.ind-search {
+	position:absolute;
+	top:15px;
+	left:15px;
+	right:15px;
+	width:auto;
+	height:50px;
+	background-color:#ebebeb;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	background-image: url(../img/ind-search.png);
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: 5% 50%;
+}
+.ind-questions-box {
+	position:absolute;
+	top:15px;
+	right:15px;
+	width:80px;
+	height:50px;
+	background-color:#ebebeb;
+	padding: 10px 0;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}
+.ind-questions-box a{
+	color: #727272;
+	font-size: 18px;
+	background-image: url(../img/question.png);
+	background-size: 25px 25px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 30px;
+	border-left: 2px solid #dcdcdc;
+	height: 30px;
+	line-height: 30px;
+}
+.ind-nav{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+}
+.ind-nav li{
+	float: left;
+	width: 33.3%;
+	height: 100%;
+}
+.ind-nav li a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color:#727272;
+	font-size: 18px;
+	line-height: 60px;
+}
+.ind-nav li a.on{
+	color:#000;
+	border-bottom: 2px solid #000;
+}
+
+.experiment-item{
+	width: 100%;
+	background-color: #fff;
+	padding: 16px 20px 25px;
+	margin-top: 10px;
+	box-shadow: 0px 0px 2px #dcdcdc;
+}
+.experiment-media{
+	width: 100%;
+	margin: 15px 0;
+}
+.experiment-media video{
+	width: 100%;
+}
+.experiment-describe{
+	padding: 0 8px;
+}
+.experiment-details{
+	margin-top: 30px;
+}
+.experiment-details span{
+	font-size: 20px;
+	margin-top: -5px;
+}
+
+.dianxue-experiment,
+.jisuanji-experiment{
+	display: none;
+}
+
+/*Experiment-Details*/
+.experiment-details-header
+{
+	height: 73px;
+	background-color: #fff;
+	border-bottom: 1px solid #dcdcdc;
+}
+.header-box{
+	position:absolute;
+	top:13px;
+	left:15px;
+	right:15px;
+	width:auto;
+	height:47px;
+	background-color:#ebebeb;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}
+.header-box>a{
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: 50% 50%;
+	width: 20px;
+	height: 100%;
+} 
+a.header-back{
+	margin-left: 10px;
+	background-image: url(../img/back.png);
+}
+a.header-share{
+	margin-right: 20px;
+	background-image: url(../img/share.png);
+}
+a.header-menu{
+	margin-right: 10px;
+	background-size: 5px 20px;
+	background-image: url(../img/menu.png);
+}
+
+.experiment-title{
+	height: 60px;
+	background-color: #fff;		
+	padding:15px 20px 0;
+	font-size: 25px;
+}
+.experiment-title h1{
+	line-height: 50px;
+	margin-top: 6px;
+}
+.experiment{
+	height: 70px;
+	background-color: #fff;
+	border-bottom: 1px solid #dcdcdc;
+	padding: 15px 20px;
+}
+.experiment a{
+	display: inline-block;
+	height: 100%;
+	line-height: 40px;
+	color:#727272;
+}
+a.do-experiment{
+	color:#5ca2f7;
+	background-image: url(../img/question.png);
+	background-size: 20px 20px;
+	background-repeat: no-repeat;
+	background-position: 10% 50%;
+	background-color: #f6f6f6;
+	padding: 0 15px 0 30px;
+	border-radius: 10px;
+	font-size: 15px;
+}
+.look-other-experiment{
+	background-image: url(../img/right-arrow.png);
+	background-size: 15px 20px;
+	background-repeat: no-repeat;
+	background-position: center right;
+	padding-right: 25px;
+	font-size: 15px;
+	color: #727272;
+}
+.experiment-message{
+	margin-top: 6px;
+	background-color: #fff;
+}
+.experiment-message-header{
+	height: 94px;
+	padding:20px;
+	border-bottom: 1px solid #dcdcdc;
+}
+.head-face,
+.head-face img{
+	width: 54px;
+	height: 54px;
+	border-radius: 27px;
+}
+.account-number{
+	margin-left: 10px;
+}
+.account-number p{
+	display: inline-block;
+	font-size: 18px;
+	margin-bottom: 6px;
+	color:#000;
+	background-image: url(../img/shiyan.png);
+	background-size: 15px 15px;
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding-right: 20px;
+}
+.account-number span{
+	display: block;
+	font-size: 15px;
+	color:#727272;
+}
+.attention{
+	height: 100%;
+}
+.attention button{
+	height: 42px;
+	margin-top: 6px;
+	font-size: 15px;
+}
+.attention button em{
+	font-size: 20px;
+}
+.experiment-message-text
+{
+	padding: 20px 0;
+}
+.experiment-message-text p{
+	font-size: 15px;
+	color:#727272;
+
+}
+.experiment-details-footer button{
+	height: 35px;
+	margin-top: 9px;
+}
+.agree{
+	margin-left: 20px;
+}
+.disagree{
+	margin-left: -40px;
+}
+.experiment-details-footer button span{
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	background-size: 15px 10px;
+	padding-left: 15px;
+}
+.agree span{
+	background-image: url(../img/up-grey.png)
+}
+.disagree span{
+	background-image: url(../img/down-grey.png);
+}
+/*.experiment-details-footer ul{
+	float: right;
+}
+.experiment-details-footer li{
+	float: left;
+}*/

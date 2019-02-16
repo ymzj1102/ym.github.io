@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>实验</title>
+
+</head>
+<body>
+<div class="experiment-title">
+    <div align="center">
+        <h1 style="line-height: 20px;top: -10px;">Multisim2001仿真练习</h1>
+    </div>
+</div>
+
+<div class="experiment-message clearfix">
+</div>
+<div class="experiment-message-text">
+</div>
+<h2>一、实践目的</h2>
+<p>1、通过单级放大电路的仿真练习，初步了解Multisim2001的基本使用；<br>
+    2、掌握利用Multisim2001进行电路静态工作点分析、交流小信号分析、瞬态分析、傅里叶分析、参数扫描分析、温度扫描分析等。</p>
+<h2>二、实践内容</h2>
+<h3>1、启动Multisim2001，在电路编辑区域编辑以下电路，如图2.1所示。</h3>
+<img src="img/dz_01.png">
+<p>注意：由于节点编号给连线顺序有关，你的节点编号可能与图2.1不同。若没有显示节点编号，可以通过如下设置。</p>
+<blockquote>菜单栏→Options（参数）→Preferences（优先设置）→Circuit（电路），将Show node names前选中即可。</blockquote>
+<h3>2、仿真分析</h3>
+<p>（1）直流工作点分析（DC Operating Point）</p>
+<blockquote>a、菜单栏→Simulate（仿真）→Analyses（分析）→DC Operating Point…（直流工作点</blockquote>
+<blockquote>b、在图2.2窗口中选择仿真参数类型（电压和电流、电压、电流、器件/模型参数、所有变量）。这里选择“电压”。</blockquote>
+<img src="img/dz_02.png">
+<blockquote>c、将节点1、2、3、10添加到右边仿真变量窗口中，若选择错误可以移回变量到右边窗口中。</blockquote>
+<blockquote>d、点击“Simulate”，开始仿真，结果如图2.3所示。从表中看出三极管Q1的基极电压为V1=2.25821V，发射极电压V2=1.61939V，集电极电压V2=5.7751
+    6V，电源电压V10=12.00000V，三极管工作在放大状态。</blockquote>
+<img src="img/dz_03.png">
+<p>（2）交流小信号分析（AC Analysis...）</p>
+<p>交流小信号分析主要用于分析电路的幅频特性和相频特性。考虑到后面分析需要，先对V1做一定的设置，双击V1设置成如图2.4、2.5所示。其中瞬态分析的信号参数用于电路的实时分析，交流小信号设置的参数用于频率特性分析，失真度分析的信号电压用于分析电路失真度，频率为瞬态分析设置的频率。在进行仿真前一定要对实际情况有个初步判断，信号参数应尽量接近实际值，以免出现严重误差。</p>
+<img src="img/dz_04.png">
+<blockquote>a、菜单栏→Simulate→Analyses→AC Analysis...。</blockquote>
+<blockquote>b、在图2.6中设置扫频方式，在图2.7中设置输出变量（需要观察的信号）。</blockquote>
+<img src="img/dz_05.png">
+<img src="img/dz_06.png">
+<blockquote>c、运行仿真，结果如图2.8所示（省略相频特性）。</blockquote>
+<img src="img/dz_07.png">
+<p>从频率特性中可以看出，中频输出电压V4=10.0443V，输入电压在图2.5设置为V1=0.1V，因此，中频电压放大倍数为100.443。</p>
+<p>（3）瞬态分析（Transient Analysis...）</p>
+<p>瞬态分析又称为实时分析或时域分析，相当于用示波器观察波形分析，可以很直观地反映出电路的工作状态，尤其对于观察电路的暂态过程，非常方便。</p>
+<blockquote>a、菜单栏→Simulate→Analyses→Transient Analysis...。</blockquote>
+<blockquote>b、在图2.9中设置好开始时间和结束时间。</blockquote>
+<img src="img/dz_08.png">
+<blockquote>c、运行仿真，结果如图2.10所示。</blockquote>
+<img src="img/dz_09.png">
+<p>从仿真结果看出，在通电3ms以前电路处于暂态，然后电路处于稳态。输出电压的峰值为100mV，在图2.4中设置的输入电压峰值为1mV，因此电路的放大倍数为100。与交流小信号分析的结果基本一致。
+   <br> 若将图2.4中设置的输入电压峰值为100mV，则可以明显地观察到放大电路出现失真。因此瞬态分析对于分析放大电路的最大输出动态范围非常有利。</p>
+<p>（4）傅里叶分析（Fourier Analysis...）</p>
+<p>傅里叶分析又称为频域分析，对观察输出信号中新增频率信号非常有用。若有新增频率信号，说明电路产生了飞线性失真。</p>
+<p>a、菜单栏→Simulate→Analyses→Fourier Analysis...。<br>
+    b、在图2.10中设置好基波频率和谐波次数，输入信号的幅度由图2.5频率特性电压确定。<br>
+ <img src="img/dz_10.png">
+    c、运行仿真，结果分为列表形式（只列出前6次谐波的情况）和频谱模式。</p>
+<img src="img/dz_11.png">
+<p>从列表中看出，V4基波电压为0.0974803V，V4二次谐波电压为0.000663501V，V4三次谐波电压为0.000395291V……。由于高次谐波幅度很小，在图2.11中几乎没有显示出高次谐波频谱，所以输出电压失真较小，在列表中显示非线性失真THD=0.97621 %。</p>
+<p> （5）参数扫描分析（Parameter Sweep Analysis...）</p>
+   <p> 参数扫描分析就是通过对电路中某些元器件参数，在一定范围变化时对电路性能的影响进行分析，相当于对电路做调试工作，以此对电路的某些性能指标进行优化。下面以确定图2.1的最大动态范围为例。</p>
+<p><a href="https://www.wenjuan.in/s/m6zi6b/">测试题</a> </p>
+<p><a href="../Index.html">返回首页</a> </p>
+</body>
+</html>
